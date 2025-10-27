@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Switch_incremented_Counter
-Mon Oct 27 14:36:59 2025
+Mon Oct 27 15:24:01 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Standard Edition
 
 
@@ -50,7 +50,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                                    ;
 +---------------------------------+---------------------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Oct 27 14:36:59 2025                         ;
+; Analysis & Synthesis Status     ; Successful - Mon Oct 27 15:24:01 2025                         ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Standard Edition ;
 ; Revision Name                   ; Switch_incremented_Counter                                    ;
 ; Top-level Entity Name           ; DE1_SOC_golden_top                                            ;
@@ -380,7 +380,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Standard Edition
-    Info: Processing started: Mon Oct 27 14:36:46 2025
+    Info: Processing started: Mon Oct 27 15:23:49 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Switch_incremented_Counter -c Switch_incremented_Counter
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -398,6 +398,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file ssegdec
 Info (12021): Found 2 design units, including 1 entities, in source file doubledabble.vhd
     Info (12022): Found design unit 1: doubleDabble-rtl File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DoubleDabble.vhd Line: 17
     Info (12023): Found entity 1: doubleDabble File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DoubleDabble.vhd Line: 9
+Info (12021): Found 0 design units, including 0 entities, in source file threedigittallycountertb.vhd
 Info (12127): Elaborating entity "DE1_SOC_golden_top" for the top level hierarchy
 Warning (10034): Output port "DRAM_ADDR" at DE1_SOC_golden_top.v(100) has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 100
 Warning (10034): Output port "DRAM_BA" at DE1_SOC_golden_top.v(101) has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 101
@@ -662,8 +663,8 @@ Info (21057): Implemented 414 device resources after synthesis - the final resou
     Info (21061): Implemented 173 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 251 warnings
     Info: Peak virtual memory: 4882 megabytes
-    Info: Processing ended: Mon Oct 27 14:37:00 2025
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:11
+    Info: Processing ended: Mon Oct 27 15:24:01 2025
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:10
 
 
