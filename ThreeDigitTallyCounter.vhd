@@ -5,15 +5,23 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 use work.ssegPackage.all;
 
+
+
 entity ThreeDigitTallyCounter is port 
 (
         button, reset, clk : in std_logic;   
         sseg0, sseg1, sseg2 : out std_logic_vector(7 downto 0);
         sw0, sw1, sw2 : in std_logic;
-		  led0, led1, led2 : out std_logic -- output leds representing states
+		  led0, led1, led2 : out std_logic -- output LEDs representing states
 );
 end ThreeDigitTallyCounter;
 
+
+
+
+
+	
+-- architecture
 architecture behavior of ThreeDigitTallyCounter is
 
     -- Build an enumerated type for the state machine
@@ -39,9 +47,55 @@ architecture behavior of ThreeDigitTallyCounter is
 
     -- Switch registers
     signal sw_reg0, sw_reg1, sw_reg2 : std_logic := '0';
+	 
+	 -- flip_flop signals
+	 signal btn_sync1, btn_sync2 : std_logic := 1;
+	 signal sw0_sync1, sw0_sync2 : std_logic := 1;
+	 signal sw1_sync1, sw1_sync2 : std_logic := 1;
+	 signal sw2_sync1, sw2_sync2 : std_logic := 1;
+
+	 signal btn_timer : integer range 0 to 50000 := 0;
+	 signal btn_stable : std_log := '1';
 
 begin
+	-- flip flop syncronizer
+	process(clk)
+	begin
+		if rising_edge(clk) then
+		
+			btn_sync1 <= button;
+			btn_sync2 <= btn_sync1;
+			
+			sw0_sync1 <= sw0; 
+			sw0_sync2 <= sw0_sync1;
+			
+			sw1_sync1 <= sw1;
+			sw1_sync2 <= sw1_sync1;
+			
+			sw2_sync1 <= sw2;
+			sw2_sync2 <= sw2_sync1;
+			
+		end if;
+	end process;
 
+	-- debouncer
+
+	process (clk)
+	begin
+		if rising_edge(clk) then
+			if btn_sync2 /= btn_stable then -- initiate timer for debounce
+				btn_timer = button_timer + 1;
+				if btn_timer > 50000 then -- 10ms
+					btn_stable <= btn_sync2;
+					btn_timer <= 0
+				end if;
+			else;
+				btn_timer <= 0;
+			end if;
+		end if;
+	end process
+				
+	
     clk_50 <= clk;
 
     threeDigit : doubleDabble

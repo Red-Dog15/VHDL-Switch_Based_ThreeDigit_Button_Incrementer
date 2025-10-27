@@ -1,12 +1,12 @@
-Fitter Status : Successful - Mon Oct 27 11:45:39 2025
+Fitter Status : Successful - Mon Oct 27 13:10:27 2025
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Standard Edition
 Revision Name : Switch_incremented_Counter
 Top-level Entity Name : DE1_SOC_golden_top
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 73 / 32,070 ( < 1 % )
-Total registers : 115
+Logic utilization (in ALMs) : 74 / 32,070 ( < 1 % )
+Total registers : 125
 Total pins : 241 / 457 ( 53 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 4,065,280 ( 0 % )

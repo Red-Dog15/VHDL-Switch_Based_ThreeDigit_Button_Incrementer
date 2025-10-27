@@ -1,5 +1,5 @@
 Fitter report for Switch_incremented_Counter
-Mon Oct 27 11:45:39 2025
+Mon Oct 27 13:10:27 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Standard Edition
 
 
@@ -65,15 +65,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                                  ;
 +---------------------------------+---------------------------------------------------------------+
-; Fitter Status                   ; Successful - Mon Oct 27 11:45:39 2025                         ;
+; Fitter Status                   ; Successful - Mon Oct 27 13:10:27 2025                         ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Standard Edition ;
 ; Revision Name                   ; Switch_incremented_Counter                                    ;
 ; Top-level Entity Name           ; DE1_SOC_golden_top                                            ;
 ; Family                          ; Cyclone V                                                     ;
 ; Device                          ; 5CSEMA5F31C6                                                  ;
 ; Timing Models                   ; Final                                                         ;
-; Logic utilization (in ALMs)     ; 73 / 32,070 ( < 1 % )                                         ;
-; Total registers                 ; 115                                                           ;
+; Logic utilization (in ALMs)     ; 74 / 32,070 ( < 1 % )                                         ;
+; Total registers                 ; 125                                                           ;
 ; Total pins                      ; 241 / 457 ( 53 % )                                            ;
 ; Total virtual pins              ; 0                                                             ;
 ; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                                         ;
@@ -175,28 +175,38 @@ https://fpgasoftware.intel.com/eula.
 ; Node                                                          ; Action     ; Operation                                         ; Reason                     ; Node Port ; Node Port Name ; Destination Node                                                        ; Destination Port ; Destination Port Name ;
 +---------------------------------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+-------------------------------------------------------------------------+------------------+-----------------------+
 ; CLOCK_50~inputCLKENA0                                         ; Created    ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                                                         ;                  ;                       ;
-; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|bcd[0]      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|bcd[0]~DUPLICATE      ;                  ;                       ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|bcd[1]      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|bcd[1]~DUPLICATE      ;                  ;                       ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|bcd[7]      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|bcd[7]~DUPLICATE      ;                  ;                       ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|bcd[10]     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|bcd[10]~DUPLICATE     ;                  ;                       ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[0]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[0]~DUPLICATE        ;                  ;                       ;
 ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[1]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[1]~DUPLICATE        ;                  ;                       ;
 ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[2]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[2]~DUPLICATE        ;                  ;                       ;
-; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[3]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[3]~DUPLICATE        ;                  ;                       ;
 ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[4]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[4]~DUPLICATE        ;                  ;                       ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[5]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[5]~DUPLICATE        ;                  ;                       ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[6]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[6]~DUPLICATE        ;                  ;                       ;
 ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[7]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[7]~DUPLICATE        ;                  ;                       ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[8]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[8]~DUPLICATE        ;                  ;                       ;
 ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[9]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[9]~DUPLICATE        ;                  ;                       ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[10]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[10]~DUPLICATE       ;                  ;                       ;
 ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[11]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[11]~DUPLICATE       ;                  ;                       ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[12]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[12]~DUPLICATE       ;                  ;                       ;
 ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[13]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[13]~DUPLICATE       ;                  ;                       ;
 ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[15]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[15]~DUPLICATE       ;                  ;                       ;
-; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[17]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[17]~DUPLICATE       ;                  ;                       ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[16]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[16]~DUPLICATE       ;                  ;                       ;
 ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[18]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[18]~DUPLICATE       ;                  ;                       ;
 ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[19]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[19]~DUPLICATE       ;                  ;                       ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[20]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[20]~DUPLICATE       ;                  ;                       ;
 ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[21]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[21]~DUPLICATE       ;                  ;                       ;
-; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[24]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[24]~DUPLICATE       ;                  ;                       ;
-; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[28]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[28]~DUPLICATE       ;                  ;                       ;
-; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[12] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[12]~DUPLICATE ;                  ;                       ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[23]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[23]~DUPLICATE       ;                  ;                       ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[31]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[31]~DUPLICATE       ;                  ;                       ;
 ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[13] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[13]~DUPLICATE ;                  ;                       ;
-; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[15] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[15]~DUPLICATE ;                  ;                       ;
-; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[16] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[16]~DUPLICATE ;                  ;                       ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[14] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[14]~DUPLICATE ;                  ;                       ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[17] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[17]~DUPLICATE ;                  ;                       ;
 ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[18] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[18]~DUPLICATE ;                  ;                       ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[20] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[20]~DUPLICATE ;                  ;                       ;
 ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[21] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[21]~DUPLICATE ;                  ;                       ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[22] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[22]~DUPLICATE ;                  ;                       ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[23] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[23]~DUPLICATE ;                  ;                       ;
 +---------------------------------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+-------------------------------------------------------------------------+------------------+-----------------------+
 
 
@@ -341,8 +351,8 @@ https://fpgasoftware.intel.com/eula.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 794 ) ; 0.00 % ( 0 / 794 )         ; 0.00 % ( 0 / 794 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 794 ) ; 0.00 % ( 0 / 794 )         ; 0.00 % ( 0 / 794 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 795 ) ; 0.00 % ( 0 / 795 )         ; 0.00 % ( 0 / 795 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 795 ) ; 0.00 % ( 0 / 795 )         ; 0.00 % ( 0 / 795 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -365,7 +375,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 794 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 795 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 0 )      ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -381,12 +391,12 @@ The pin-out file can be found in G:/Documents/3rd year/hardware/vhdl_projects/Sw
 +-------------------------------------------------------------+--------------------+-------+
 ; Resource                                                    ; Usage              ; %     ;
 +-------------------------------------------------------------+--------------------+-------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 73 / 32,070        ; < 1 % ;
-; ALMs needed [=A-B+C]                                        ; 73                 ;       ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 78 / 32,070        ; < 1 % ;
-;         [a] ALMs used for LUT logic and registers           ; 36                 ;       ;
-;         [b] ALMs used for LUT logic                         ; 31                 ;       ;
-;         [c] ALMs used for registers                         ; 11                 ;       ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 74 / 32,070        ; < 1 % ;
+; ALMs needed [=A-B+C]                                        ; 74                 ;       ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 79 / 32,070        ; < 1 % ;
+;         [a] ALMs used for LUT logic and registers           ; 37                 ;       ;
+;         [b] ALMs used for LUT logic                         ; 32                 ;       ;
+;         [c] ALMs used for registers                         ; 10                 ;       ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                  ;       ;
 ;     [B] Estimate of ALMs recoverable by dense packing       ; 5 / 32,070         ; < 1 % ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 32,070         ; 0 %   ;
@@ -397,25 +407,25 @@ The pin-out file can be found in G:/Documents/3rd year/hardware/vhdl_projects/Sw
 ;                                                             ;                    ;       ;
 ; Difficulty packing design                                   ; Low                ;       ;
 ;                                                             ;                    ;       ;
-; Total LABs:  partially or completely used                   ; 11 / 3,207         ; < 1 % ;
-;     -- Logic LABs                                           ; 11                 ;       ;
+; Total LABs:  partially or completely used                   ; 10 / 3,207         ; < 1 % ;
+;     -- Logic LABs                                           ; 10                 ;       ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                  ;       ;
 ;                                                             ;                    ;       ;
-; Combinational ALUT usage for logic                          ; 123                ;       ;
+; Combinational ALUT usage for logic                          ; 124                ;       ;
 ;     -- 7 input functions                                    ; 0                  ;       ;
-;     -- 6 input functions                                    ; 13                 ;       ;
-;     -- 5 input functions                                    ; 19                 ;       ;
-;     -- 4 input functions                                    ; 22                 ;       ;
-;     -- <=3 input functions                                  ; 69                 ;       ;
-; Combinational ALUT usage for route-throughs                 ; 15                 ;       ;
+;     -- 6 input functions                                    ; 14                 ;       ;
+;     -- 5 input functions                                    ; 18                 ;       ;
+;     -- 4 input functions                                    ; 27                 ;       ;
+;     -- <=3 input functions                                  ; 65                 ;       ;
+; Combinational ALUT usage for route-throughs                 ; 12                 ;       ;
 ;                                                             ;                    ;       ;
-; Dedicated logic registers                                   ; 115                ;       ;
+; Dedicated logic registers                                   ; 125                ;       ;
 ;     -- By type:                                             ;                    ;       ;
 ;         -- Primary logic registers                          ; 93 / 64,140        ; < 1 % ;
-;         -- Secondary logic registers                        ; 22 / 64,140        ; < 1 % ;
+;         -- Secondary logic registers                        ; 32 / 64,140        ; < 1 % ;
 ;     -- By function:                                         ;                    ;       ;
 ;         -- Design implementation registers                  ; 93                 ;       ;
-;         -- Routing optimization registers                   ; 22                 ;       ;
+;         -- Routing optimization registers                   ; 32                 ;       ;
 ;                                                             ;                    ;       ;
 ; Virtual pins                                                ; 0                  ;       ;
 ; I/O pins                                                    ; 241 / 457          ; 53 %  ;
@@ -471,11 +481,11 @@ The pin-out file can be found in G:/Documents/3rd year/hardware/vhdl_projects/Sw
 ; Impedance control blocks                                    ; 0 / 4              ; 0 %   ;
 ; Hard Memory Controllers                                     ; 0 / 2              ; 0 %   ;
 ; Average interconnect usage (total/H/V)                      ; 0.1% / 0.1% / 0.1% ;       ;
-; Peak interconnect usage (total/H/V)                         ; 1.0% / 0.9% / 1.5% ;       ;
-; Maximum fan-out                                             ; 115                ;       ;
-; Highest non-global fan-out                                  ; 83                 ;       ;
-; Total fan-out                                               ; 1124               ;       ;
-; Average fan-out                                             ; 1.35               ;       ;
+; Peak interconnect usage (total/H/V)                         ; 0.9% / 0.8% / 1.0% ;       ;
+; Maximum fan-out                                             ; 125                ;       ;
+; Highest non-global fan-out                                  ; 91                 ;       ;
+; Total fan-out                                               ; 1157               ;       ;
+; Average fan-out                                             ; 1.38               ;       ;
 +-------------------------------------------------------------+--------------------+-------+
 
 
@@ -484,12 +494,12 @@ The pin-out file can be found in G:/Documents/3rd year/hardware/vhdl_projects/Sw
 +-------------------------------------------------------------+----------------------+--------------------------------+
 ; Statistic                                                   ; Top                  ; hard_block:auto_generated_inst ;
 +-------------------------------------------------------------+----------------------+--------------------------------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 73 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
-; ALMs needed [=A-B+C]                                        ; 73                   ; 0                              ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 78 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
-;         [a] ALMs used for LUT logic and registers           ; 36                   ; 0                              ;
-;         [b] ALMs used for LUT logic                         ; 31                   ; 0                              ;
-;         [c] ALMs used for registers                         ; 11                   ; 0                              ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 74 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
+; ALMs needed [=A-B+C]                                        ; 74                   ; 0                              ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 79 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
+;         [a] ALMs used for LUT logic and registers           ; 37                   ; 0                              ;
+;         [b] ALMs used for LUT logic                         ; 32                   ; 0                              ;
+;         [c] ALMs used for registers                         ; 10                   ; 0                              ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                    ; 0                              ;
 ;     [B] Estimate of ALMs recoverable by dense packing       ; 5 / 32070 ( < 1 % )  ; 0 / 32070 ( 0 % )              ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 32070 ( 0 % )    ; 0 / 32070 ( 0 % )              ;
@@ -500,17 +510,17 @@ The pin-out file can be found in G:/Documents/3rd year/hardware/vhdl_projects/Sw
 ;                                                             ;                      ;                                ;
 ; Difficulty packing design                                   ; Low                  ; Low                            ;
 ;                                                             ;                      ;                                ;
-; Total LABs:  partially or completely used                   ; 11 / 3207 ( < 1 % )  ; 0 / 3207 ( 0 % )               ;
-;     -- Logic LABs                                           ; 11                   ; 0                              ;
+; Total LABs:  partially or completely used                   ; 10 / 3207 ( < 1 % )  ; 0 / 3207 ( 0 % )               ;
+;     -- Logic LABs                                           ; 10                   ; 0                              ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
-; Combinational ALUT usage for logic                          ; 123                  ; 0                              ;
+; Combinational ALUT usage for logic                          ; 124                  ; 0                              ;
 ;     -- 7 input functions                                    ; 0                    ; 0                              ;
-;     -- 6 input functions                                    ; 13                   ; 0                              ;
-;     -- 5 input functions                                    ; 19                   ; 0                              ;
-;     -- 4 input functions                                    ; 22                   ; 0                              ;
-;     -- <=3 input functions                                  ; 69                   ; 0                              ;
-; Combinational ALUT usage for route-throughs                 ; 15                   ; 0                              ;
+;     -- 6 input functions                                    ; 14                   ; 0                              ;
+;     -- 5 input functions                                    ; 18                   ; 0                              ;
+;     -- 4 input functions                                    ; 27                   ; 0                              ;
+;     -- <=3 input functions                                  ; 65                   ; 0                              ;
+; Combinational ALUT usage for route-throughs                 ; 12                   ; 0                              ;
 ; Memory ALUT usage                                           ; 0                    ; 0                              ;
 ;     -- 64-address deep                                      ; 0                    ; 0                              ;
 ;     -- 32-address deep                                      ; 0                    ; 0                              ;
@@ -518,10 +528,10 @@ The pin-out file can be found in G:/Documents/3rd year/hardware/vhdl_projects/Sw
 ; Dedicated logic registers                                   ; 0                    ; 0                              ;
 ;     -- By type:                                             ;                      ;                                ;
 ;         -- Primary logic registers                          ; 93 / 64140 ( < 1 % ) ; 0 / 64140 ( 0 % )              ;
-;         -- Secondary logic registers                        ; 22 / 64140 ( < 1 % ) ; 0 / 64140 ( 0 % )              ;
+;         -- Secondary logic registers                        ; 32 / 64140 ( < 1 % ) ; 0 / 64140 ( 0 % )              ;
 ;     -- By function:                                         ;                      ;                                ;
 ;         -- Design implementation registers                  ; 93                   ; 0                              ;
-;         -- Routing optimization registers                   ; 22                   ; 0                              ;
+;         -- Routing optimization registers                   ; 32                   ; 0                              ;
 ;                                                             ;                      ;                                ;
 ;                                                             ;                      ;                                ;
 ; Virtual pins                                                ; 0                    ; 0                              ;
@@ -538,8 +548,8 @@ The pin-out file can be found in G:/Documents/3rd year/hardware/vhdl_projects/Sw
 ;     -- Registered Output Connections                        ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; Internal Connections                                        ;                      ;                                ;
-;     -- Total Connections                                    ; 1124                 ; 0                              ;
-;     -- Registered Connections                               ; 304                  ; 0                              ;
+;     -- Total Connections                                    ; 1157                 ; 0                              ;
+;     -- Registered Connections                               ; 315                  ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; External Connections                                        ;                      ;                                ;
 ;     -- Top                                                  ; 192                  ; 0                              ;
@@ -576,15 +586,15 @@ The pin-out file can be found in G:/Documents/3rd year/hardware/vhdl_projects/Sw
 ; CLOCK2_50  ; AA16  ; 4A       ; 56           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
 ; CLOCK3_50  ; Y26   ; 5B       ; 89           ; 25           ; 3            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
 ; CLOCK4_50  ; K14   ; 8A       ; 32           ; 81           ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
-; CLOCK_50   ; AF14  ; 3B       ; 32           ; 0            ; 0            ; 115                   ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
+; CLOCK_50   ; AF14  ; 3B       ; 32           ; 0            ; 0            ; 125                   ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
 ; IRDA_RXD   ; AA30  ; 5B       ; 89           ; 21           ; 20           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
 ; KEY[0]     ; AA14  ; 3B       ; 36           ; 0            ; 0            ; 3                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
 ; KEY[1]     ; AA15  ; 3B       ; 36           ; 0            ; 17           ; 5                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
 ; KEY[2]     ; W15   ; 3B       ; 40           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
 ; KEY[3]     ; Y16   ; 3B       ; 40           ; 0            ; 17           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
 ; SW[0]      ; AB12  ; 3A       ; 12           ; 0            ; 17           ; 3                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
-; SW[1]      ; AC12  ; 3A       ; 16           ; 0            ; 0            ; 6                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
-; SW[2]      ; AF9   ; 3A       ; 8            ; 0            ; 34           ; 6                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
+; SW[1]      ; AC12  ; 3A       ; 16           ; 0            ; 0            ; 4                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
+; SW[2]      ; AF9   ; 3A       ; 8            ; 0            ; 34           ; 5                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
 ; SW[3]      ; AF10  ; 3A       ; 4            ; 0            ; 51           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
 ; SW[4]      ; AD11  ; 3A       ; 2            ; 0            ; 40           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
 ; SW[5]      ; AD12  ; 3A       ; 16           ; 0            ; 17           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
@@ -1980,12 +1990,12 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +---------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-----------------------------------------------------------------------+------------------------+--------------+
 ; Compilation Hierarchy Node      ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                   ; Entity Name            ; Library Name ;
 +---------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-----------------------------------------------------------------------+------------------------+--------------+
-; |DE1_SOC_golden_top             ; 73.0 (0.5)           ; 77.0 (0.5)                       ; 4.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 123 (1)             ; 115 (0)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 241  ; 0            ; |DE1_SOC_golden_top                                                   ; DE1_SOC_golden_top     ; work         ;
-;    |ThreeDigitTallyCounter:u1|  ; 72.5 (27.0)          ; 76.5 (27.5)                      ; 4.0 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 122 (48)            ; 115 (25)                  ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|ThreeDigitTallyCounter:u1                         ; ThreeDigitTallyCounter ; work         ;
-;       |doubleDabble:threeDigit| ; 38.3 (38.3)          ; 40.3 (40.3)                      ; 2.0 (2.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 53 (53)             ; 90 (90)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|ThreeDigitTallyCounter:u1|doubleDabble:threeDigit ; doubleDabble           ; work         ;
-;       |ssegDecoder:ssegHunds|   ; 2.4 (2.4)            ; 2.5 (2.5)                        ; 0.1 (0.1)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|ThreeDigitTallyCounter:u1|ssegDecoder:ssegHunds   ; ssegDecoder            ; work         ;
-;       |ssegDecoder:ssegOnes|    ; 2.5 (2.5)            ; 3.0 (3.0)                        ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|ThreeDigitTallyCounter:u1|ssegDecoder:ssegOnes    ; ssegDecoder            ; work         ;
-;       |ssegDecoder:ssegTens|    ; 2.3 (2.3)            ; 3.2 (3.2)                        ; 0.9 (0.9)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|ThreeDigitTallyCounter:u1|ssegDecoder:ssegTens    ; ssegDecoder            ; work         ;
+; |DE1_SOC_golden_top             ; 74.0 (0.5)           ; 78.5 (0.5)                       ; 4.5 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 124 (1)             ; 125 (0)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 241  ; 0            ; |DE1_SOC_golden_top                                                   ; DE1_SOC_golden_top     ; work         ;
+;    |ThreeDigitTallyCounter:u1|  ; 73.5 (28.0)          ; 78.0 (29.0)                      ; 4.5 (1.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 123 (49)            ; 125 (25)                  ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|ThreeDigitTallyCounter:u1                         ; ThreeDigitTallyCounter ; work         ;
+;       |doubleDabble:threeDigit| ; 38.5 (38.5)          ; 39.2 (39.2)                      ; 0.7 (0.7)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 53 (53)             ; 100 (100)                 ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|ThreeDigitTallyCounter:u1|doubleDabble:threeDigit ; doubleDabble           ; work         ;
+;       |ssegDecoder:ssegHunds|   ; 2.4 (2.4)            ; 3.3 (3.3)                        ; 0.9 (0.9)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|ThreeDigitTallyCounter:u1|ssegDecoder:ssegHunds   ; ssegDecoder            ; work         ;
+;       |ssegDecoder:ssegOnes|    ; 2.3 (2.3)            ; 3.2 (3.2)                        ; 0.8 (0.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|ThreeDigitTallyCounter:u1|ssegDecoder:ssegOnes    ; ssegDecoder            ; work         ;
+;       |ssegDecoder:ssegTens|    ; 2.3 (2.3)            ; 3.3 (3.3)                        ; 1.1 (1.1)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|ThreeDigitTallyCounter:u1|ssegDecoder:ssegTens    ; ssegDecoder            ; work         ;
 +---------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-----------------------------------------------------------------------+------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -2234,182 +2244,179 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; KEY[0]        ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; KEY[1]        ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; SW[1]         ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; SW[2]         ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; SW[2]         ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; SW[0]         ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 +---------------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
 
 
-+-----------------------------------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                                                          ;
-+-----------------------------------------------------------+-------------------+---------+
-; Source Pin / Fanout                                       ; Pad To Core Index ; Setting ;
-+-----------------------------------------------------------+-------------------+---------+
-; ADC_DOUT                                                  ;                   ;         ;
-; AUD_ADCDAT                                                ;                   ;         ;
-; CLOCK2_50                                                 ;                   ;         ;
-; CLOCK3_50                                                 ;                   ;         ;
-; CLOCK4_50                                                 ;                   ;         ;
-; IRDA_RXD                                                  ;                   ;         ;
-; KEY[2]                                                    ;                   ;         ;
-; KEY[3]                                                    ;                   ;         ;
-; SW[3]                                                     ;                   ;         ;
-; SW[4]                                                     ;                   ;         ;
-; SW[5]                                                     ;                   ;         ;
-; SW[6]                                                     ;                   ;         ;
-; SW[7]                                                     ;                   ;         ;
-; SW[8]                                                     ;                   ;         ;
-; SW[9]                                                     ;                   ;         ;
-; TD_CLK27                                                  ;                   ;         ;
-; TD_DATA[0]                                                ;                   ;         ;
-; TD_DATA[1]                                                ;                   ;         ;
-; TD_DATA[2]                                                ;                   ;         ;
-; TD_DATA[3]                                                ;                   ;         ;
-; TD_DATA[4]                                                ;                   ;         ;
-; TD_DATA[5]                                                ;                   ;         ;
-; TD_DATA[6]                                                ;                   ;         ;
-; TD_DATA[7]                                                ;                   ;         ;
-; TD_HS                                                     ;                   ;         ;
-; TD_VS                                                     ;                   ;         ;
-; AUD_ADCLRCK                                               ;                   ;         ;
-; AUD_BCLK                                                  ;                   ;         ;
-; AUD_DACLRCK                                               ;                   ;         ;
-; DRAM_DQ[0]                                                ;                   ;         ;
-; DRAM_DQ[1]                                                ;                   ;         ;
-; DRAM_DQ[2]                                                ;                   ;         ;
-; DRAM_DQ[3]                                                ;                   ;         ;
-; DRAM_DQ[4]                                                ;                   ;         ;
-; DRAM_DQ[5]                                                ;                   ;         ;
-; DRAM_DQ[6]                                                ;                   ;         ;
-; DRAM_DQ[7]                                                ;                   ;         ;
-; DRAM_DQ[8]                                                ;                   ;         ;
-; DRAM_DQ[9]                                                ;                   ;         ;
-; DRAM_DQ[10]                                               ;                   ;         ;
-; DRAM_DQ[11]                                               ;                   ;         ;
-; DRAM_DQ[12]                                               ;                   ;         ;
-; DRAM_DQ[13]                                               ;                   ;         ;
-; DRAM_DQ[14]                                               ;                   ;         ;
-; DRAM_DQ[15]                                               ;                   ;         ;
-; FPGA_I2C_SDAT                                             ;                   ;         ;
-; GPIO_0[0]                                                 ;                   ;         ;
-; GPIO_0[1]                                                 ;                   ;         ;
-; GPIO_0[2]                                                 ;                   ;         ;
-; GPIO_0[3]                                                 ;                   ;         ;
-; GPIO_0[4]                                                 ;                   ;         ;
-; GPIO_0[5]                                                 ;                   ;         ;
-; GPIO_0[6]                                                 ;                   ;         ;
-; GPIO_0[7]                                                 ;                   ;         ;
-; GPIO_0[8]                                                 ;                   ;         ;
-; GPIO_0[9]                                                 ;                   ;         ;
-; GPIO_0[10]                                                ;                   ;         ;
-; GPIO_0[11]                                                ;                   ;         ;
-; GPIO_0[12]                                                ;                   ;         ;
-; GPIO_0[13]                                                ;                   ;         ;
-; GPIO_0[14]                                                ;                   ;         ;
-; GPIO_0[15]                                                ;                   ;         ;
-; GPIO_0[16]                                                ;                   ;         ;
-; GPIO_0[17]                                                ;                   ;         ;
-; GPIO_0[18]                                                ;                   ;         ;
-; GPIO_0[19]                                                ;                   ;         ;
-; GPIO_0[20]                                                ;                   ;         ;
-; GPIO_0[21]                                                ;                   ;         ;
-; GPIO_0[22]                                                ;                   ;         ;
-; GPIO_0[23]                                                ;                   ;         ;
-; GPIO_0[24]                                                ;                   ;         ;
-; GPIO_0[25]                                                ;                   ;         ;
-; GPIO_0[26]                                                ;                   ;         ;
-; GPIO_0[27]                                                ;                   ;         ;
-; GPIO_0[28]                                                ;                   ;         ;
-; GPIO_0[29]                                                ;                   ;         ;
-; GPIO_0[30]                                                ;                   ;         ;
-; GPIO_0[31]                                                ;                   ;         ;
-; GPIO_0[32]                                                ;                   ;         ;
-; GPIO_0[33]                                                ;                   ;         ;
-; GPIO_0[34]                                                ;                   ;         ;
-; GPIO_0[35]                                                ;                   ;         ;
-; GPIO_1[0]                                                 ;                   ;         ;
-; GPIO_1[1]                                                 ;                   ;         ;
-; GPIO_1[2]                                                 ;                   ;         ;
-; GPIO_1[3]                                                 ;                   ;         ;
-; GPIO_1[4]                                                 ;                   ;         ;
-; GPIO_1[5]                                                 ;                   ;         ;
-; GPIO_1[6]                                                 ;                   ;         ;
-; GPIO_1[7]                                                 ;                   ;         ;
-; GPIO_1[8]                                                 ;                   ;         ;
-; GPIO_1[9]                                                 ;                   ;         ;
-; GPIO_1[10]                                                ;                   ;         ;
-; GPIO_1[11]                                                ;                   ;         ;
-; GPIO_1[12]                                                ;                   ;         ;
-; GPIO_1[13]                                                ;                   ;         ;
-; GPIO_1[14]                                                ;                   ;         ;
-; GPIO_1[15]                                                ;                   ;         ;
-; GPIO_1[16]                                                ;                   ;         ;
-; GPIO_1[17]                                                ;                   ;         ;
-; GPIO_1[18]                                                ;                   ;         ;
-; GPIO_1[19]                                                ;                   ;         ;
-; GPIO_1[20]                                                ;                   ;         ;
-; GPIO_1[21]                                                ;                   ;         ;
-; GPIO_1[22]                                                ;                   ;         ;
-; GPIO_1[23]                                                ;                   ;         ;
-; GPIO_1[24]                                                ;                   ;         ;
-; GPIO_1[25]                                                ;                   ;         ;
-; GPIO_1[26]                                                ;                   ;         ;
-; GPIO_1[27]                                                ;                   ;         ;
-; GPIO_1[28]                                                ;                   ;         ;
-; GPIO_1[29]                                                ;                   ;         ;
-; GPIO_1[30]                                                ;                   ;         ;
-; GPIO_1[31]                                                ;                   ;         ;
-; GPIO_1[32]                                                ;                   ;         ;
-; GPIO_1[33]                                                ;                   ;         ;
-; GPIO_1[34]                                                ;                   ;         ;
-; GPIO_1[35]                                                ;                   ;         ;
-; PS2_CLK                                                   ;                   ;         ;
-; PS2_CLK2                                                  ;                   ;         ;
-; PS2_DAT                                                   ;                   ;         ;
-; PS2_DAT2                                                  ;                   ;         ;
-; CLOCK_50                                                  ;                   ;         ;
-; KEY[0]                                                    ;                   ;         ;
-;      - ThreeDigitTallyCounter:u1|Selector12~0             ; 0                 ; 0       ;
-;      - ThreeDigitTallyCounter:u1|counter[11]~2            ; 0                 ; 0       ;
-;      - ThreeDigitTallyCounter:u1|counter_multiplier[6]~1  ; 0                 ; 0       ;
-; KEY[1]                                                    ;                   ;         ;
-;      - ThreeDigitTallyCounter:u1|state.s2                 ; 0                 ; 0       ;
-;      - ThreeDigitTallyCounter:u1|state.s1                 ; 0                 ; 0       ;
-;      - ThreeDigitTallyCounter:u1|state.s0                 ; 0                 ; 0       ;
-;      - ThreeDigitTallyCounter:u1|counter[11]~2            ; 0                 ; 0       ;
-;      - ThreeDigitTallyCounter:u1|counter_multiplier[6]~1  ; 0                 ; 0       ;
-; SW[1]                                                     ;                   ;         ;
-;      - ThreeDigitTallyCounter:u1|counter_multiplier[6]~2  ; 0                 ; 0       ;
-;      - ThreeDigitTallyCounter:u1|counter_multiplier[6]~4  ; 0                 ; 0       ;
-;      - ThreeDigitTallyCounter:u1|counter_multiplier[3]~9  ; 0                 ; 0       ;
-;      - ThreeDigitTallyCounter:u1|counter_multiplier[2]~11 ; 0                 ; 0       ;
-;      - ThreeDigitTallyCounter:u1|process_0~1              ; 0                 ; 0       ;
-;      - ThreeDigitTallyCounter:u1|sw_reg1~0                ; 0                 ; 0       ;
-; SW[2]                                                     ;                   ;         ;
-;      - ThreeDigitTallyCounter:u1|counter_multiplier[6]~2  ; 1                 ; 0       ;
-;      - ThreeDigitTallyCounter:u1|counter_multiplier[6]~4  ; 1                 ; 0       ;
-;      - ThreeDigitTallyCounter:u1|counter_multiplier[6]~5  ; 1                 ; 0       ;
-;      - ThreeDigitTallyCounter:u1|process_0~0              ; 1                 ; 0       ;
-;      - ThreeDigitTallyCounter:u1|counter_multiplier[2]~11 ; 1                 ; 0       ;
-;      - ThreeDigitTallyCounter:u1|sw_reg2~0                ; 1                 ; 0       ;
-; SW[0]                                                     ;                   ;         ;
-;      - ThreeDigitTallyCounter:u1|counter_multiplier[6]~2  ; 0                 ; 0       ;
-;      - ThreeDigitTallyCounter:u1|counter_multiplier~13    ; 0                 ; 0       ;
-;      - ThreeDigitTallyCounter:u1|sw_reg0~0                ; 0                 ; 0       ;
-+-----------------------------------------------------------+-------------------+---------+
++----------------------------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                                         ;
++----------------------------------------------------------+-------------------+---------+
+; Source Pin / Fanout                                      ; Pad To Core Index ; Setting ;
++----------------------------------------------------------+-------------------+---------+
+; ADC_DOUT                                                 ;                   ;         ;
+; AUD_ADCDAT                                               ;                   ;         ;
+; CLOCK2_50                                                ;                   ;         ;
+; CLOCK3_50                                                ;                   ;         ;
+; CLOCK4_50                                                ;                   ;         ;
+; IRDA_RXD                                                 ;                   ;         ;
+; KEY[2]                                                   ;                   ;         ;
+; KEY[3]                                                   ;                   ;         ;
+; SW[3]                                                    ;                   ;         ;
+; SW[4]                                                    ;                   ;         ;
+; SW[5]                                                    ;                   ;         ;
+; SW[6]                                                    ;                   ;         ;
+; SW[7]                                                    ;                   ;         ;
+; SW[8]                                                    ;                   ;         ;
+; SW[9]                                                    ;                   ;         ;
+; TD_CLK27                                                 ;                   ;         ;
+; TD_DATA[0]                                               ;                   ;         ;
+; TD_DATA[1]                                               ;                   ;         ;
+; TD_DATA[2]                                               ;                   ;         ;
+; TD_DATA[3]                                               ;                   ;         ;
+; TD_DATA[4]                                               ;                   ;         ;
+; TD_DATA[5]                                               ;                   ;         ;
+; TD_DATA[6]                                               ;                   ;         ;
+; TD_DATA[7]                                               ;                   ;         ;
+; TD_HS                                                    ;                   ;         ;
+; TD_VS                                                    ;                   ;         ;
+; AUD_ADCLRCK                                              ;                   ;         ;
+; AUD_BCLK                                                 ;                   ;         ;
+; AUD_DACLRCK                                              ;                   ;         ;
+; DRAM_DQ[0]                                               ;                   ;         ;
+; DRAM_DQ[1]                                               ;                   ;         ;
+; DRAM_DQ[2]                                               ;                   ;         ;
+; DRAM_DQ[3]                                               ;                   ;         ;
+; DRAM_DQ[4]                                               ;                   ;         ;
+; DRAM_DQ[5]                                               ;                   ;         ;
+; DRAM_DQ[6]                                               ;                   ;         ;
+; DRAM_DQ[7]                                               ;                   ;         ;
+; DRAM_DQ[8]                                               ;                   ;         ;
+; DRAM_DQ[9]                                               ;                   ;         ;
+; DRAM_DQ[10]                                              ;                   ;         ;
+; DRAM_DQ[11]                                              ;                   ;         ;
+; DRAM_DQ[12]                                              ;                   ;         ;
+; DRAM_DQ[13]                                              ;                   ;         ;
+; DRAM_DQ[14]                                              ;                   ;         ;
+; DRAM_DQ[15]                                              ;                   ;         ;
+; FPGA_I2C_SDAT                                            ;                   ;         ;
+; GPIO_0[0]                                                ;                   ;         ;
+; GPIO_0[1]                                                ;                   ;         ;
+; GPIO_0[2]                                                ;                   ;         ;
+; GPIO_0[3]                                                ;                   ;         ;
+; GPIO_0[4]                                                ;                   ;         ;
+; GPIO_0[5]                                                ;                   ;         ;
+; GPIO_0[6]                                                ;                   ;         ;
+; GPIO_0[7]                                                ;                   ;         ;
+; GPIO_0[8]                                                ;                   ;         ;
+; GPIO_0[9]                                                ;                   ;         ;
+; GPIO_0[10]                                               ;                   ;         ;
+; GPIO_0[11]                                               ;                   ;         ;
+; GPIO_0[12]                                               ;                   ;         ;
+; GPIO_0[13]                                               ;                   ;         ;
+; GPIO_0[14]                                               ;                   ;         ;
+; GPIO_0[15]                                               ;                   ;         ;
+; GPIO_0[16]                                               ;                   ;         ;
+; GPIO_0[17]                                               ;                   ;         ;
+; GPIO_0[18]                                               ;                   ;         ;
+; GPIO_0[19]                                               ;                   ;         ;
+; GPIO_0[20]                                               ;                   ;         ;
+; GPIO_0[21]                                               ;                   ;         ;
+; GPIO_0[22]                                               ;                   ;         ;
+; GPIO_0[23]                                               ;                   ;         ;
+; GPIO_0[24]                                               ;                   ;         ;
+; GPIO_0[25]                                               ;                   ;         ;
+; GPIO_0[26]                                               ;                   ;         ;
+; GPIO_0[27]                                               ;                   ;         ;
+; GPIO_0[28]                                               ;                   ;         ;
+; GPIO_0[29]                                               ;                   ;         ;
+; GPIO_0[30]                                               ;                   ;         ;
+; GPIO_0[31]                                               ;                   ;         ;
+; GPIO_0[32]                                               ;                   ;         ;
+; GPIO_0[33]                                               ;                   ;         ;
+; GPIO_0[34]                                               ;                   ;         ;
+; GPIO_0[35]                                               ;                   ;         ;
+; GPIO_1[0]                                                ;                   ;         ;
+; GPIO_1[1]                                                ;                   ;         ;
+; GPIO_1[2]                                                ;                   ;         ;
+; GPIO_1[3]                                                ;                   ;         ;
+; GPIO_1[4]                                                ;                   ;         ;
+; GPIO_1[5]                                                ;                   ;         ;
+; GPIO_1[6]                                                ;                   ;         ;
+; GPIO_1[7]                                                ;                   ;         ;
+; GPIO_1[8]                                                ;                   ;         ;
+; GPIO_1[9]                                                ;                   ;         ;
+; GPIO_1[10]                                               ;                   ;         ;
+; GPIO_1[11]                                               ;                   ;         ;
+; GPIO_1[12]                                               ;                   ;         ;
+; GPIO_1[13]                                               ;                   ;         ;
+; GPIO_1[14]                                               ;                   ;         ;
+; GPIO_1[15]                                               ;                   ;         ;
+; GPIO_1[16]                                               ;                   ;         ;
+; GPIO_1[17]                                               ;                   ;         ;
+; GPIO_1[18]                                               ;                   ;         ;
+; GPIO_1[19]                                               ;                   ;         ;
+; GPIO_1[20]                                               ;                   ;         ;
+; GPIO_1[21]                                               ;                   ;         ;
+; GPIO_1[22]                                               ;                   ;         ;
+; GPIO_1[23]                                               ;                   ;         ;
+; GPIO_1[24]                                               ;                   ;         ;
+; GPIO_1[25]                                               ;                   ;         ;
+; GPIO_1[26]                                               ;                   ;         ;
+; GPIO_1[27]                                               ;                   ;         ;
+; GPIO_1[28]                                               ;                   ;         ;
+; GPIO_1[29]                                               ;                   ;         ;
+; GPIO_1[30]                                               ;                   ;         ;
+; GPIO_1[31]                                               ;                   ;         ;
+; GPIO_1[32]                                               ;                   ;         ;
+; GPIO_1[33]                                               ;                   ;         ;
+; GPIO_1[34]                                               ;                   ;         ;
+; GPIO_1[35]                                               ;                   ;         ;
+; PS2_CLK                                                  ;                   ;         ;
+; PS2_CLK2                                                 ;                   ;         ;
+; PS2_DAT                                                  ;                   ;         ;
+; PS2_DAT2                                                 ;                   ;         ;
+; CLOCK_50                                                 ;                   ;         ;
+; KEY[0]                                                   ;                   ;         ;
+;      - ThreeDigitTallyCounter:u1|Selector12~0            ; 0                 ; 0       ;
+;      - ThreeDigitTallyCounter:u1|counter[11]~2           ; 0                 ; 0       ;
+;      - ThreeDigitTallyCounter:u1|counter_multiplier[6]~3 ; 0                 ; 0       ;
+; KEY[1]                                                   ;                   ;         ;
+;      - ThreeDigitTallyCounter:u1|state.s2                ; 0                 ; 0       ;
+;      - ThreeDigitTallyCounter:u1|state.s1                ; 0                 ; 0       ;
+;      - ThreeDigitTallyCounter:u1|state.s0                ; 0                 ; 0       ;
+;      - ThreeDigitTallyCounter:u1|counter[11]~2           ; 0                 ; 0       ;
+;      - ThreeDigitTallyCounter:u1|counter_multiplier[6]~3 ; 0                 ; 0       ;
+; SW[1]                                                    ;                   ;         ;
+;      - ThreeDigitTallyCounter:u1|process_0~0             ; 0                 ; 0       ;
+;      - ThreeDigitTallyCounter:u1|counter_multiplier[6]~4 ; 0                 ; 0       ;
+;      - ThreeDigitTallyCounter:u1|counter_multiplier[6]~6 ; 0                 ; 0       ;
+;      - ThreeDigitTallyCounter:u1|sw_reg1~0               ; 0                 ; 0       ;
+; SW[2]                                                    ;                   ;         ;
+;      - ThreeDigitTallyCounter:u1|process_0~1             ; 0                 ; 0       ;
+;      - ThreeDigitTallyCounter:u1|counter_multiplier[6]~4 ; 0                 ; 0       ;
+;      - ThreeDigitTallyCounter:u1|counter_multiplier[6]~6 ; 0                 ; 0       ;
+;      - ThreeDigitTallyCounter:u1|counter_multiplier[6]~7 ; 0                 ; 0       ;
+;      - ThreeDigitTallyCounter:u1|sw_reg2~0               ; 0                 ; 0       ;
+; SW[0]                                                    ;                   ;         ;
+;      - ThreeDigitTallyCounter:u1|counter_multiplier~1    ; 0                 ; 0       ;
+;      - ThreeDigitTallyCounter:u1|counter_multiplier[6]~4 ; 0                 ; 0       ;
+;      - ThreeDigitTallyCounter:u1|sw_reg0~0               ; 0                 ; 0       ;
++----------------------------------------------------------+-------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                                                                    ;
-+------------------------------------------------------------+----------------------+---------+---------------------------------------+--------+----------------------+------------------+---------------------------+
-; Name                                                       ; Location             ; Fan-Out ; Usage                                 ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+------------------------------------------------------------+----------------------+---------+---------------------------------------+--------+----------------------+------------------+---------------------------+
-; CLOCK_50                                                   ; PIN_AF14             ; 115     ; Clock                                 ; yes    ; Global Clock         ; GCLK6            ; --                        ;
-; KEY[1]                                                     ; PIN_AA15             ; 5       ; Async. clear                          ; no     ; --                   ; --               ; --                        ;
-; ThreeDigitTallyCounter:u1|counter[10]~0                    ; LABCELL_X51_Y7_N57   ; 12      ; Sync. clear                           ; no     ; --                   ; --               ; --                        ;
-; ThreeDigitTallyCounter:u1|counter[11]~2                    ; LABCELL_X51_Y7_N48   ; 12      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; ThreeDigitTallyCounter:u1|counter_multiplier[6]~1          ; LABCELL_X51_Y7_N39   ; 10      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|Equal0~6 ; MLABCELL_X84_Y16_N48 ; 83      ; Clock enable, Sync. clear, Sync. load ; no     ; --                   ; --               ; --                        ;
-+------------------------------------------------------------+----------------------+---------+---------------------------------------+--------+----------------------+------------------+---------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                                                                   ;
++------------------------------------------------------------+---------------------+---------+---------------------------------------+--------+----------------------+------------------+---------------------------+
+; Name                                                       ; Location            ; Fan-Out ; Usage                                 ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++------------------------------------------------------------+---------------------+---------+---------------------------------------+--------+----------------------+------------------+---------------------------+
+; CLOCK_50                                                   ; PIN_AF14            ; 125     ; Clock                                 ; yes    ; Global Clock         ; GCLK6            ; --                        ;
+; KEY[1]                                                     ; PIN_AA15            ; 5       ; Async. clear                          ; no     ; --                   ; --               ; --                        ;
+; ThreeDigitTallyCounter:u1|counter[11]~2                    ; LABCELL_X63_Y5_N36  ; 12      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
+; ThreeDigitTallyCounter:u1|counter[8]~0                     ; LABCELL_X63_Y5_N42  ; 12      ; Sync. clear                           ; no     ; --                   ; --               ; --                        ;
+; ThreeDigitTallyCounter:u1|counter_multiplier[6]~3          ; LABCELL_X63_Y5_N51  ; 8       ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|Equal0~6 ; LABCELL_X79_Y13_N30 ; 91      ; Clock enable, Sync. clear, Sync. load ; no     ; --                   ; --               ; --                        ;
++------------------------------------------------------------+---------------------+---------+---------------------------------------+--------+----------------------+------------------+---------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------+
@@ -2417,7 +2424,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------+----------+---------+----------------------+------------------+---------------------------+
 ; Name     ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +----------+----------+---------+----------------------+------------------+---------------------------+
-; CLOCK_50 ; PIN_AF14 ; 115     ; Global Clock         ; GCLK6            ; --                        ;
+; CLOCK_50 ; PIN_AF14 ; 125     ; Global Clock         ; GCLK6            ; --                        ;
 +----------+----------+---------+----------------------+------------------+---------------------------+
 
 
@@ -2426,14 +2433,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------+-------------------------+
 ; Routing Resource Type                       ; Usage                   ;
 +---------------------------------------------+-------------------------+
-; Block interconnects                         ; 186 / 289,320 ( < 1 % ) ;
-; C12 interconnects                           ; 19 / 13,420 ( < 1 % )   ;
+; Block interconnects                         ; 175 / 289,320 ( < 1 % ) ;
+; C12 interconnects                           ; 15 / 13,420 ( < 1 % )   ;
 ; C2 interconnects                            ; 36 / 119,108 ( < 1 % )  ;
-; C4 interconnects                            ; 43 / 56,300 ( < 1 % )   ;
+; C4 interconnects                            ; 45 / 56,300 ( < 1 % )   ;
 ; DQS bus muxes                               ; 0 / 25 ( 0 % )          ;
 ; DQS-18 I/O buses                            ; 0 / 25 ( 0 % )          ;
 ; DQS-9 I/O buses                             ; 0 / 25 ( 0 % )          ;
-; Direct links                                ; 51 / 289,320 ( < 1 % )  ;
+; Direct links                                ; 50 / 289,320 ( < 1 % )  ;
 ; Global clocks                               ; 1 / 16 ( 6 % )          ;
 ; HPS SDRAM PLL inputs                        ; 0 / 1 ( 0 % )           ;
 ; HPS SDRAM PLL outputs                       ; 0 / 1 ( 0 % )           ;
@@ -2489,12 +2496,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; HPS_INTERFACE_TPIU_TRACE_INPUTs             ; 0 / 2 ( 0 % )           ;
 ; HPS_INTERFACE_TPIU_TRACE_OUTPUTs            ; 0 / 33 ( 0 % )          ;
 ; Horizontal periphery clocks                 ; 0 / 72 ( 0 % )          ;
-; Local interconnects                         ; 89 / 84,580 ( < 1 % )   ;
+; Local interconnects                         ; 83 / 84,580 ( < 1 % )   ;
 ; Quadrant clocks                             ; 0 / 66 ( 0 % )          ;
-; R14 interconnects                           ; 34 / 12,676 ( < 1 % )   ;
-; R14/C12 interconnect drivers                ; 48 / 20,720 ( < 1 % )   ;
-; R3 interconnects                            ; 67 / 130,992 ( < 1 % )  ;
-; R6 interconnects                            ; 79 / 266,960 ( < 1 % )  ;
+; R14 interconnects                           ; 29 / 12,676 ( < 1 % )   ;
+; R14/C12 interconnect drivers                ; 39 / 20,720 ( < 1 % )   ;
+; R3 interconnects                            ; 68 / 130,992 ( < 1 % )  ;
+; R6 interconnects                            ; 91 / 266,960 ( < 1 % )  ;
 ; Spine clocks                                ; 2 / 360 ( < 1 % )       ;
 ; Wire stub REs                               ; 0 / 15,858 ( 0 % )      ;
 +---------------------------------------------+-------------------------+
@@ -2850,7 +2857,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+----------------------+-------------------+
 ; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
-; CLOCK_50        ; CLOCK_50             ; 9.4               ;
+; CLOCK_50        ; CLOCK_50             ; 9.7               ;
+; CLOCK_50,I/O    ; CLOCK_50             ; 1.1               ;
 +-----------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
@@ -2861,35 +2869,66 @@ This will disable optimization of problematic paths and expose them for further 
 +---------------------------------------------------------------+---------------------------------------------------------------+-------------------+
 ; Source Register                                               ; Destination Register                                          ; Delay Added in ns ;
 +---------------------------------------------------------------+---------------------------------------------------------------+-------------------+
-; ThreeDigitTallyCounter:u1|sw_reg2                             ; ThreeDigitTallyCounter:u1|counter_multiplier[4]               ; 0.366             ;
-; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[16] ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[19] ; 0.301             ;
-; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[20] ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[22] ; 0.293             ;
-; ThreeDigitTallyCounter:u1|state.s2                            ; ThreeDigitTallyCounter:u1|state.s1                            ; 0.282             ;
-; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[14] ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[15] ; 0.280             ;
+; ThreeDigitTallyCounter:u1|counter_multiplier[1]               ; ThreeDigitTallyCounter:u1|counter[11]                         ; 0.449             ;
+; ThreeDigitTallyCounter:u1|state.s0                            ; ThreeDigitTallyCounter:u1|counter_multiplier[6]               ; 0.326             ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[20] ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[23] ; 0.298             ;
 ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[18] ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[20] ; 0.277             ;
-; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[17] ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[19] ; 0.274             ;
-; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[13] ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[14] ; 0.274             ;
-; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[21] ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[22] ; 0.271             ;
-; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[15] ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[14] ; 0.260             ;
-; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[22] ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[21] ; 0.256             ;
-; ThreeDigitTallyCounter:u1|counter_multiplier[6]               ; ThreeDigitTallyCounter:u1|sw_reg0                             ; 0.253             ;
-; ThreeDigitTallyCounter:u1|counter_multiplier[4]               ; ThreeDigitTallyCounter:u1|sw_reg0                             ; 0.246             ;
-; ThreeDigitTallyCounter:u1|counter_multiplier[3]               ; ThreeDigitTallyCounter:u1|sw_reg0                             ; 0.244             ;
-; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[19] ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[17] ; 0.237             ;
-; ThreeDigitTallyCounter:u1|counter_multiplier[5]               ; ThreeDigitTallyCounter:u1|sw_reg0                             ; 0.224             ;
-; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[12] ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[14] ; 0.221             ;
-; ThreeDigitTallyCounter:u1|sw_reg1                             ; ThreeDigitTallyCounter:u1|counter_multiplier[0]               ; 0.203             ;
-; SW[1]                                                         ; ThreeDigitTallyCounter:u1|counter_multiplier[4]               ; 0.171             ;
-; SW[2]                                                         ; ThreeDigitTallyCounter:u1|counter_multiplier[4]               ; 0.171             ;
-; SW[0]                                                         ; ThreeDigitTallyCounter:u1|counter_multiplier[4]               ; 0.171             ;
-; ThreeDigitTallyCounter:u1|sw_reg0                             ; ThreeDigitTallyCounter:u1|counter_multiplier[4]               ; 0.171             ;
-; ThreeDigitTallyCounter:u1|counter_multiplier[2]               ; ThreeDigitTallyCounter:u1|sw_reg0                             ; 0.121             ;
-; ThreeDigitTallyCounter:u1|counter_multiplier[1]               ; ThreeDigitTallyCounter:u1|sw_reg0                             ; 0.121             ;
-; ThreeDigitTallyCounter:u1|state.s0                            ; ThreeDigitTallyCounter:u1|counter_multiplier[6]               ; 0.063             ;
-; KEY[0]                                                        ; ThreeDigitTallyCounter:u1|counter_multiplier[6]               ; 0.063             ;
-; KEY[1]                                                        ; ThreeDigitTallyCounter:u1|counter_multiplier[6]               ; 0.063             ;
+; ThreeDigitTallyCounter:u1|counter_multiplier[6]               ; ThreeDigitTallyCounter:u1|counter_multiplier[5]               ; 0.277             ;
+; ThreeDigitTallyCounter:u1|counter_multiplier[0]               ; ThreeDigitTallyCounter:u1|counter[11]                         ; 0.277             ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[22] ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[23] ; 0.272             ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[21] ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[23] ; 0.271             ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[14] ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[13] ; 0.271             ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[17] ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[20] ; 0.266             ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[13] ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[14] ; 0.265             ;
+; ThreeDigitTallyCounter:u1|counter_multiplier[3]               ; ThreeDigitTallyCounter:u1|counter_multiplier[5]               ; 0.265             ;
+; ThreeDigitTallyCounter:u1|counter_multiplier[4]               ; ThreeDigitTallyCounter:u1|counter_multiplier[5]               ; 0.260             ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[19] ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[20] ; 0.259             ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[15] ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[14] ; 0.256             ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[23] ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[21] ; 0.251             ;
+; ThreeDigitTallyCounter:u1|sw_reg2                             ; ThreeDigitTallyCounter:u1|counter_multiplier[4]               ; 0.242             ;
+; ThreeDigitTallyCounter:u1|counter_multiplier[5]               ; ThreeDigitTallyCounter:u1|counter_multiplier[5]               ; 0.233             ;
+; SW[1]                                                         ; ThreeDigitTallyCounter:u1|counter_multiplier[4]               ; 0.166             ;
+; ThreeDigitTallyCounter:u1|sw_reg1                             ; ThreeDigitTallyCounter:u1|counter_multiplier[4]               ; 0.166             ;
+; SW[2]                                                         ; ThreeDigitTallyCounter:u1|counter_multiplier[4]               ; 0.166             ;
+; SW[0]                                                         ; ThreeDigitTallyCounter:u1|counter_multiplier[4]               ; 0.166             ;
+; ThreeDigitTallyCounter:u1|sw_reg0                             ; ThreeDigitTallyCounter:u1|counter_multiplier[4]               ; 0.166             ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[17]       ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[3]        ; 0.157             ;
+; ThreeDigitTallyCounter:u1|counter_multiplier[2]               ; ThreeDigitTallyCounter:u1|counter_multiplier[5]               ; 0.154             ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[6]        ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[3]        ; 0.137             ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[5]        ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[3]        ; 0.137             ;
+; KEY[0]                                                        ; ThreeDigitTallyCounter:u1|counter_multiplier[6]               ; 0.134             ;
+; KEY[1]                                                        ; ThreeDigitTallyCounter:u1|counter_multiplier[6]               ; 0.134             ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[30]       ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[3]        ; 0.119             ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[31]       ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[3]        ; 0.119             ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[28]       ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[3]        ; 0.119             ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[27]       ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[3]        ; 0.119             ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[26]       ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[3]        ; 0.119             ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[25]       ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[3]        ; 0.119             ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[24]       ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[3]        ; 0.119             ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[23]       ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[3]        ; 0.119             ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[29]       ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[3]        ; 0.119             ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[21]       ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[3]        ; 0.119             ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[20]       ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[3]        ; 0.119             ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[19]       ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[3]        ; 0.119             ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[18]       ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[3]        ; 0.119             ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[22]       ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[3]        ; 0.119             ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[15]       ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[3]        ; 0.119             ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[14]       ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[3]        ; 0.119             ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[13]       ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[3]        ; 0.119             ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[12]       ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[3]        ; 0.119             ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[11]       ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[3]        ; 0.119             ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[10]       ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[3]        ; 0.119             ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[9]        ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[3]        ; 0.119             ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[8]        ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[3]        ; 0.119             ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[7]        ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[3]        ; 0.119             ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[4]        ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[3]        ; 0.119             ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[3]        ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[3]        ; 0.119             ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[2]        ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[3]        ; 0.119             ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[1]        ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[3]        ; 0.119             ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[0]        ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[3]        ; 0.119             ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[16]       ; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[3]        ; 0.119             ;
 +---------------------------------------------------------------+---------------------------------------------------------------+-------------------+
-Note: This table only shows the top 27 path(s) that have the largest delay added for hold.
+Note: This table only shows the top 58 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -2927,7 +2966,7 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.79 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.93 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -3033,10 +3072,10 @@ Warning (169064): Following 96 pins have no output enable or a GND or VCC output
     Info (169065): Pin PS2_DAT2 has a permanently disabled output enable File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 218
 Info (144001): Generated suppressed messages file G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/Switch_incremented_Counter.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 6910 megabytes
-    Info: Processing ended: Mon Oct 27 11:45:42 2025
-    Info: Elapsed time: 00:00:42
-    Info: Total CPU time (on all processors): 00:00:51
+    Info: Peak virtual memory: 6913 megabytes
+    Info: Processing ended: Mon Oct 27 13:10:30 2025
+    Info: Elapsed time: 00:00:44
+    Info: Total CPU time (on all processors): 00:00:54
 
 
 +----------------------------+
