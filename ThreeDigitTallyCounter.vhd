@@ -49,13 +49,13 @@ architecture behavior of ThreeDigitTallyCounter is
     signal sw_reg0, sw_reg1, sw_reg2 : std_logic := '0';
 	 
 	 -- flip_flop signals
-	 signal btn_sync1, btn_sync2 : std_logic := 1;
-	 signal sw0_sync1, sw0_sync2 : std_logic := 1;
-	 signal sw1_sync1, sw1_sync2 : std_logic := 1;
-	 signal sw2_sync1, sw2_sync2 : std_logic := 1;
+	 signal btn_sync1, btn_sync2 : std_logic := '1';
+	 signal sw0_sync1, sw0_sync2 : std_logic := '1';
+	 signal sw1_sync1, sw1_sync2 : std_logic := '1';
+	 signal sw2_sync1, sw2_sync2 : std_logic := '1';
 
 	 signal btn_timer : integer range 0 to 50000 := 0;
-	 signal btn_stable : std_log := '1';
+	 signal btn_stable : std_logic := '1';
 
 begin
 	-- flip flop syncronizer
@@ -84,16 +84,16 @@ begin
 	begin
 		if rising_edge(clk) then
 			if btn_sync2 /= btn_stable then -- initiate timer for debounce
-				btn_timer = button_timer + 1;
+				btn_timer <= btn_timer + 1;
 				if btn_timer > 50000 then -- 10ms
 					btn_stable <= btn_sync2;
-					btn_timer <= 0
+					btn_timer <= 0;
 				end if;
-			else;
+			else
 				btn_timer <= 0;
 			end if;
 		end if;
-	end process
+	end process;
 				
 	
     clk_50 <= clk;
@@ -109,7 +109,7 @@ begin
     ssegTens  : ssegDecoder port map (binaryIn => bcd(7 downto 4), ssegOut => sseg1);
     ssegHunds : ssegDecoder port map (binaryIn => bcd(11 downto 8), ssegOut => sseg2);
 
-    process (clk, reset, button)
+    process (clk, reset)
     begin
 		  if reset = '0' then -- check for reset button press
 			  state <= s2;
@@ -119,7 +119,7 @@ begin
             case state is
                 when s0 =>
 							  
-                    if button = '0' then -- check for button press
+                    if btn_stable = '0' then -- check for button press
                         if (sw0 = '0') and (sw_reg0 = '0') then
                             counter_multiplier <= counter_multiplier + 1;
                             sw_reg0 <= '1';
@@ -155,7 +155,7 @@ begin
                     end if;
 
                 when s1 =>
-                    if button = '1' then -- checks if button was released
+                    if btn_stable = '1' then -- checks if button was released
                         state <= s0;
                     else
                         state <= s1;

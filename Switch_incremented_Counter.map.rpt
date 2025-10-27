@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Switch_incremented_Counter
-Mon Oct 27 14:20:03 2025
+Mon Oct 27 14:36:59 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Standard Edition
 
 
@@ -10,7 +10,20 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Standard Edit
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |DE1_SOC_golden_top|ThreeDigitTallyCounter:u1|state
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Port Connectivity Checks: "ThreeDigitTallyCounter:u1|doubleDabble:threeDigit"
+ 15. Port Connectivity Checks: "ThreeDigitTallyCounter:u1"
+ 16. Post-Synthesis Netlist Statistics for Top Partition
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
 
 
 
@@ -34,22 +47,27 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+---------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                                ;
-+-----------------------------+---------------------------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Mon Oct 27 14:20:03 2025                             ;
-; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Standard Edition ;
-; Revision Name               ; Switch_incremented_Counter                                    ;
-; Top-level Entity Name       ; DE1_SOC_golden_top                                            ;
-; Family                      ; Cyclone V                                                     ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                                     ;
-; Total registers             ; N/A until Partition Merge                                     ;
-; Total pins                  ; N/A until Partition Merge                                     ;
-; Total virtual pins          ; N/A until Partition Merge                                     ;
-; Total block memory bits     ; N/A until Partition Merge                                     ;
-; Total PLLs                  ; N/A until Partition Merge                                     ;
-; Total DLLs                  ; N/A until Partition Merge                                     ;
-+-----------------------------+---------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                                    ;
++---------------------------------+---------------------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Mon Oct 27 14:36:59 2025                         ;
+; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Standard Edition ;
+; Revision Name                   ; Switch_incremented_Counter                                    ;
+; Top-level Entity Name           ; DE1_SOC_golden_top                                            ;
+; Family                          ; Cyclone V                                                     ;
+; Logic utilization (in ALMs)     ; N/A                                                           ;
+; Total registers                 ; 112                                                           ;
+; Total pins                      ; 241                                                           ;
+; Total virtual pins              ; 0                                                             ;
+; Total block memory bits         ; 0                                                             ;
+; Total DSP Blocks                ; 0                                                             ;
+; Total HSSI RX PCSs              ; 0                                                             ;
+; Total HSSI PMA RX Deserializers ; 0                                                             ;
+; Total HSSI TX PCSs              ; 0                                                             ;
+; Total HSSI PMA TX Serializers   ; 0                                                             ;
+; Total PLLs                      ; 0                                                             ;
+; Total DLLs                      ; 0                                                             ;
++---------------------------------+---------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------+
@@ -148,11 +166,212 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-6         ;   0.0%      ;
 +----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                     ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                       ; Library ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------------------------------+---------+
+; DE1_SOC_golden_top.v             ; yes             ; User Verilog HDL File  ; G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v       ;         ;
+; ThreeDigitTallyCounter.vhd       ; yes             ; User VHDL File         ; G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/ThreeDigitTallyCounter.vhd ;         ;
+; ssegPackage.vhd                  ; yes             ; User VHDL File         ; G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/ssegPackage.vhd            ;         ;
+; ssegDecoder.vhd                  ; yes             ; User VHDL File         ; G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/ssegDecoder.vhd            ;         ;
+; DoubleDabble.vhd                 ; yes             ; User VHDL File         ; G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DoubleDabble.vhd           ;         ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimate of Logic utilization (ALMs needed) ; 88             ;
+;                                             ;                ;
+; Combinational ALUT usage for logic          ; 146            ;
+;     -- 7 input functions                    ; 0              ;
+;     -- 6 input functions                    ; 16             ;
+;     -- 5 input functions                    ; 18             ;
+;     -- 4 input functions                    ; 28             ;
+;     -- <=3 input functions                  ; 84             ;
+;                                             ;                ;
+; Dedicated logic registers                   ; 112            ;
+;                                             ;                ;
+; I/O pins                                    ; 241            ;
+;                                             ;                ;
+; Total DSP Blocks                            ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 112            ;
+; Total fan-out                               ; 1168           ;
+; Average fan-out                             ; 1.40           ;
++---------------------------------------------+----------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                      ;
++---------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------+------------------------+--------------+
+; Compilation Hierarchy Node      ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                   ; Entity Name            ; Library Name ;
++---------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------+------------------------+--------------+
+; |DE1_SOC_golden_top             ; 146 (0)             ; 112 (0)                   ; 0                 ; 0          ; 241  ; 0            ; |DE1_SOC_golden_top                                                   ; DE1_SOC_golden_top     ; work         ;
+;    |ThreeDigitTallyCounter:u1|  ; 146 (72)            ; 112 (44)                  ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|ThreeDigitTallyCounter:u1                         ; ThreeDigitTallyCounter ; work         ;
+;       |doubleDabble:threeDigit| ; 53 (53)             ; 68 (68)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|ThreeDigitTallyCounter:u1|doubleDabble:threeDigit ; doubleDabble           ; work         ;
+;       |ssegDecoder:ssegHunds|   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|ThreeDigitTallyCounter:u1|ssegDecoder:ssegHunds   ; ssegDecoder            ; work         ;
+;       |ssegDecoder:ssegOnes|    ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|ThreeDigitTallyCounter:u1|ssegDecoder:ssegOnes    ; ssegDecoder            ; work         ;
+;       |ssegDecoder:ssegTens|    ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|ThreeDigitTallyCounter:u1|ssegDecoder:ssegTens    ; ssegDecoder            ; work         ;
++---------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------+------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------+
+; State Machine - |DE1_SOC_golden_top|ThreeDigitTallyCounter:u1|state ;
++----------+----------+----------+------------------------------------+
+; Name     ; state.s0 ; state.s1 ; state.s2                           ;
++----------+----------+----------+------------------------------------+
+; state.s2 ; 0        ; 0        ; 0                                  ;
+; state.s1 ; 0        ; 1        ; 1                                  ;
+; state.s0 ; 1        ; 0        ; 1                                  ;
++----------+----------+----------+------------------------------------+
+
+
++-------------------------------------------------------------+
+; Registers Removed During Synthesis                          ;
++----------------------------------------+--------------------+
+; Register name                          ; Reason for Removal ;
++----------------------------------------+--------------------+
+; ThreeDigitTallyCounter:u1|timer[0..27] ; Lost fanout        ;
+; Total Number of Removed Registers = 28 ;                    ;
++----------------------------------------+--------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                         ;
++------------------------------------+--------------------+---------------------------------------------------------------------------+
+; Register name                      ; Reason for Removal ; Registers Removed due to This Register                                    ;
++------------------------------------+--------------------+---------------------------------------------------------------------------+
+; ThreeDigitTallyCounter:u1|timer[6] ; Lost Fanouts       ; ThreeDigitTallyCounter:u1|timer[13], ThreeDigitTallyCounter:u1|timer[14], ;
+;                                    ;                    ; ThreeDigitTallyCounter:u1|timer[15], ThreeDigitTallyCounter:u1|timer[16], ;
+;                                    ;                    ; ThreeDigitTallyCounter:u1|timer[17], ThreeDigitTallyCounter:u1|timer[18], ;
+;                                    ;                    ; ThreeDigitTallyCounter:u1|timer[19], ThreeDigitTallyCounter:u1|timer[20], ;
+;                                    ;                    ; ThreeDigitTallyCounter:u1|timer[23], ThreeDigitTallyCounter:u1|timer[22], ;
+;                                    ;                    ; ThreeDigitTallyCounter:u1|timer[21], ThreeDigitTallyCounter:u1|timer[27], ;
+;                                    ;                    ; ThreeDigitTallyCounter:u1|timer[26], ThreeDigitTallyCounter:u1|timer[25], ;
+;                                    ;                    ; ThreeDigitTallyCounter:u1|timer[24], ThreeDigitTallyCounter:u1|timer[5],  ;
+;                                    ;                    ; ThreeDigitTallyCounter:u1|timer[4], ThreeDigitTallyCounter:u1|timer[3],   ;
+;                                    ;                    ; ThreeDigitTallyCounter:u1|timer[2]                                        ;
++------------------------------------+--------------------+---------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 112   ;
+; Number of registers using Synchronous Clear  ; 59    ;
+; Number of registers using Synchronous Load   ; 11    ;
+; Number of registers using Asynchronous Clear ; 3     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 29    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------+
+; Inverted Register Statistics                                     ;
++--------------------------------------------------------+---------+
+; Inverted Register                                      ; Fan out ;
++--------------------------------------------------------+---------+
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[2] ; 2       ;
+; ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|i[3] ; 2       ;
+; ThreeDigitTallyCounter:u1|btn_stable                   ; 5       ;
+; ThreeDigitTallyCounter:u1|btn_sync2                    ; 2       ;
+; ThreeDigitTallyCounter:u1|btn_sync1                    ; 1       ;
+; Total number of inverted registers = 5                 ;         ;
++--------------------------------------------------------+---------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------+
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |DE1_SOC_golden_top|ThreeDigitTallyCounter:u1|btn_timer[3]                        ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |DE1_SOC_golden_top|ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[14] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |DE1_SOC_golden_top|ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[20] ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |DE1_SOC_golden_top|ThreeDigitTallyCounter:u1|doubleDabble:threeDigit|scratch[22] ;
+; 3:1                ; 28 bits   ; 56 LEs        ; 0 LEs                ; 56 LEs                 ; Yes        ; |DE1_SOC_golden_top|ThreeDigitTallyCounter:u1|timer[0]                            ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |DE1_SOC_golden_top|ThreeDigitTallyCounter:u1|counter_multiplier[2]               ;
+; 7:1                ; 12 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |DE1_SOC_golden_top|ThreeDigitTallyCounter:u1|counter[1]                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ThreeDigitTallyCounter:u1|doubleDabble:threeDigit"                                         ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; bcd[15..12] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ThreeDigitTallyCounter:u1"                                                                                      ;
++-------+--------+------------------+--------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity         ; Details                                                                                                ;
++-------+--------+------------------+--------------------------------------------------------------------------------------------------------+
+; sseg0 ; Output ; Critical Warning ; Can't connect array with 7 elements in array dimension 1 to port with 8 elements in the same dimension ;
+; sseg1 ; Output ; Critical Warning ; Can't connect array with 7 elements in array dimension 1 to port with 8 elements in the same dimension ;
+; sseg2 ; Output ; Critical Warning ; Can't connect array with 7 elements in array dimension 1 to port with 8 elements in the same dimension ;
++-------+--------+------------------+--------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 112                         ;
+;     CLR               ; 3                           ;
+;     ENA               ; 17                          ;
+;     ENA SCLR          ; 12                          ;
+;     SCLR              ; 47                          ;
+;     SLD               ; 11                          ;
+;     plain             ; 22                          ;
+; arriav_io_obuf        ; 96                          ;
+; arriav_lcell_comb     ; 151                         ;
+;     arith             ; 67                          ;
+;         1 data inputs ; 60                          ;
+;         2 data inputs ; 7                           ;
+;     normal            ; 84                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 6                           ;
+;         2 data inputs ; 11                          ;
+;         3 data inputs ; 4                           ;
+;         4 data inputs ; 28                          ;
+;         5 data inputs ; 18                          ;
+;         6 data inputs ; 16                          ;
+; boundary_port         ; 241                         ;
+;                       ;                             ;
+; Max LUT depth         ; 4.10                        ;
+; Average LUT depth     ; 1.90                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -161,29 +380,16 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Standard Edition
-    Info: Processing started: Mon Oct 27 14:19:54 2025
+    Info: Processing started: Mon Oct 27 14:36:46 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Switch_incremented_Counter -c Switch_incremented_Counter
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Warning (10275): Verilog HDL Module Instantiation warning at DE1_SOC_golden_top.v(277): ignored dangling comma in List of Port Connections File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 277
 Info (12021): Found 1 design units, including 1 entities, in source file de1_soc_golden_top.v
     Info (12023): Found entity 1: DE1_SOC_golden_top File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 54
-Error (10500): VHDL syntax error at ThreeDigitTallyCounter.vhd(87) near text "=";  expecting "(", or "'", or "." File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/ThreeDigitTallyCounter.vhd Line: 87
-Error (10500): VHDL syntax error at ThreeDigitTallyCounter.vhd(91) near text "end";  expecting ";" File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/ThreeDigitTallyCounter.vhd Line: 91
-Error (10500): VHDL syntax error at ThreeDigitTallyCounter.vhd(96) near text "process";  expecting "if" File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/ThreeDigitTallyCounter.vhd Line: 96
-Error (10500): VHDL syntax error at ThreeDigitTallyCounter.vhd(102) near text "port";  expecting "(", or "'", or "." File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/ThreeDigitTallyCounter.vhd Line: 102
-Error (10500): VHDL syntax error at ThreeDigitTallyCounter.vhd(106) near text ";";  expecting ":=", or "<=" File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/ThreeDigitTallyCounter.vhd Line: 106
-Error (10500): VHDL syntax error at ThreeDigitTallyCounter.vhd(108) near text "port";  expecting "(", or "'", or "." File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/ThreeDigitTallyCounter.vhd Line: 108
-Error (10500): VHDL syntax error at ThreeDigitTallyCounter.vhd(108) near text ";";  expecting ":=", or "<=" File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/ThreeDigitTallyCounter.vhd Line: 108
-Error (10500): VHDL syntax error at ThreeDigitTallyCounter.vhd(109) near text "port";  expecting "(", or "'", or "." File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/ThreeDigitTallyCounter.vhd Line: 109
-Error (10500): VHDL syntax error at ThreeDigitTallyCounter.vhd(109) near text ";";  expecting ":=", or "<=" File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/ThreeDigitTallyCounter.vhd Line: 109
-Error (10500): VHDL syntax error at ThreeDigitTallyCounter.vhd(110) near text "port";  expecting "(", or "'", or "." File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/ThreeDigitTallyCounter.vhd Line: 110
-Error (10500): VHDL syntax error at ThreeDigitTallyCounter.vhd(110) near text ";";  expecting ":=", or "<=" File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/ThreeDigitTallyCounter.vhd Line: 110
-Error (10500): VHDL syntax error at ThreeDigitTallyCounter.vhd(113) near text "begin";  expecting ":=", or "<=" File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/ThreeDigitTallyCounter.vhd Line: 113
-Error (10500): VHDL syntax error at ThreeDigitTallyCounter.vhd(176) near text "process";  expecting "if" File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/ThreeDigitTallyCounter.vhd Line: 176
-Error (10500): VHDL syntax error at ThreeDigitTallyCounter.vhd(180) near text "begin";  expecting ":=", or "<=" File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/ThreeDigitTallyCounter.vhd Line: 180
-Error (10500): VHDL syntax error at ThreeDigitTallyCounter.vhd(197) near text "process";  expecting "if" File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/ThreeDigitTallyCounter.vhd Line: 197
-Info (12021): Found 0 design units, including 0 entities, in source file threedigittallycounter.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file threedigittallycounter.vhd
+    Info (12022): Found design unit 1: ThreeDigitTallyCounter-behavior File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/ThreeDigitTallyCounter.vhd Line: 25
+    Info (12023): Found entity 1: ThreeDigitTallyCounter File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/ThreeDigitTallyCounter.vhd Line: 10
 Info (12021): Found 1 design units, including 0 entities, in source file ssegpackage.vhd
     Info (12022): Found design unit 1: ssegPackage File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/ssegPackage.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file ssegdecoder.vhd
@@ -192,10 +398,272 @@ Info (12021): Found 2 design units, including 1 entities, in source file ssegdec
 Info (12021): Found 2 design units, including 1 entities, in source file doubledabble.vhd
     Info (12022): Found design unit 1: doubleDabble-rtl File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DoubleDabble.vhd Line: 17
     Info (12023): Found entity 1: doubleDabble File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DoubleDabble.vhd Line: 9
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 15 errors, 2 warnings
-    Error: Peak virtual memory: 4847 megabytes
-    Error: Processing ended: Mon Oct 27 14:20:04 2025
-    Error: Elapsed time: 00:00:10
-    Error: Total CPU time (on all processors): 00:00:10
+Info (12127): Elaborating entity "DE1_SOC_golden_top" for the top level hierarchy
+Warning (10034): Output port "DRAM_ADDR" at DE1_SOC_golden_top.v(100) has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 100
+Warning (10034): Output port "DRAM_BA" at DE1_SOC_golden_top.v(101) has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 101
+Warning (10034): Output port "HEX3" at DE1_SOC_golden_top.v(136) has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 136
+Warning (10034): Output port "HEX4" at DE1_SOC_golden_top.v(137) has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 137
+Warning (10034): Output port "HEX5" at DE1_SOC_golden_top.v(138) has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 138
+Warning (10034): Output port "LEDR[9..3]" at DE1_SOC_golden_top.v(210) has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 210
+Warning (10034): Output port "VGA_B" at DE1_SOC_golden_top.v(237) has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 237
+Warning (10034): Output port "VGA_G" at DE1_SOC_golden_top.v(240) has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 240
+Warning (10034): Output port "VGA_R" at DE1_SOC_golden_top.v(242) has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 242
+Warning (10034): Output port "ADC_CONVST" at DE1_SOC_golden_top.v(59) has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 59
+Warning (10034): Output port "ADC_DIN" at DE1_SOC_golden_top.v(60) has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 60
+Warning (10034): Output port "ADC_SCLK" at DE1_SOC_golden_top.v(62) has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 62
+Warning (10034): Output port "AUD_DACDAT" at DE1_SOC_golden_top.v(72) has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 72
+Warning (10034): Output port "AUD_XCK" at DE1_SOC_golden_top.v(74) has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 74
+Warning (10034): Output port "DRAM_CAS_N" at DE1_SOC_golden_top.v(102) has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 102
+Warning (10034): Output port "DRAM_CKE" at DE1_SOC_golden_top.v(103) has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 103
+Warning (10034): Output port "DRAM_CLK" at DE1_SOC_golden_top.v(104) has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 104
+Warning (10034): Output port "DRAM_CS_N" at DE1_SOC_golden_top.v(105) has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 105
+Warning (10034): Output port "DRAM_LDQM" at DE1_SOC_golden_top.v(107) has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 107
+Warning (10034): Output port "DRAM_RAS_N" at DE1_SOC_golden_top.v(108) has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 108
+Warning (10034): Output port "DRAM_UDQM" at DE1_SOC_golden_top.v(109) has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 109
+Warning (10034): Output port "DRAM_WE_N" at DE1_SOC_golden_top.v(110) has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 110
+Warning (10034): Output port "FAN_CTRL" at DE1_SOC_golden_top.v(115) has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 115
+Warning (10034): Output port "FPGA_I2C_SCLK" at DE1_SOC_golden_top.v(120) has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 120
+Warning (10034): Output port "IRDA_TXD" at DE1_SOC_golden_top.v(200) has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 200
+Warning (10034): Output port "TD_RESET_N" at DE1_SOC_golden_top.v(231) has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 231
+Warning (10034): Output port "VGA_BLANK_N" at DE1_SOC_golden_top.v(238) has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 238
+Warning (10034): Output port "VGA_CLK" at DE1_SOC_golden_top.v(239) has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 239
+Warning (10034): Output port "VGA_HS" at DE1_SOC_golden_top.v(241) has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 241
+Warning (10034): Output port "VGA_SYNC_N" at DE1_SOC_golden_top.v(243) has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 243
+Warning (10034): Output port "VGA_VS" at DE1_SOC_golden_top.v(246) has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 246
+Info (12128): Elaborating entity "ThreeDigitTallyCounter" for hierarchy "ThreeDigitTallyCounter:u1" File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 277
+Warning (10036): Verilog HDL or VHDL warning at ThreeDigitTallyCounter.vhd(53): object "sw0_sync2" assigned a value but never read File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/ThreeDigitTallyCounter.vhd Line: 53
+Warning (10036): Verilog HDL or VHDL warning at ThreeDigitTallyCounter.vhd(54): object "sw1_sync2" assigned a value but never read File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/ThreeDigitTallyCounter.vhd Line: 54
+Warning (10036): Verilog HDL or VHDL warning at ThreeDigitTallyCounter.vhd(55): object "sw2_sync2" assigned a value but never read File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/ThreeDigitTallyCounter.vhd Line: 55
+Info (12128): Elaborating entity "doubleDabble" for hierarchy "ThreeDigitTallyCounter:u1|doubleDabble:threeDigit" File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/ThreeDigitTallyCounter.vhd Line: 101
+Info (12128): Elaborating entity "ssegDecoder" for hierarchy "ThreeDigitTallyCounter:u1|ssegDecoder:ssegOnes" File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/ThreeDigitTallyCounter.vhd Line: 108
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13039): The following bidirectional pins have no drivers
+    Warning (13040): bidirectional pin "AUD_ADCLRCK" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 70
+    Warning (13040): bidirectional pin "AUD_BCLK" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 71
+    Warning (13040): bidirectional pin "AUD_DACLRCK" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 73
+    Warning (13040): bidirectional pin "DRAM_DQ[0]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 106
+    Warning (13040): bidirectional pin "DRAM_DQ[1]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 106
+    Warning (13040): bidirectional pin "DRAM_DQ[2]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 106
+    Warning (13040): bidirectional pin "DRAM_DQ[3]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 106
+    Warning (13040): bidirectional pin "DRAM_DQ[4]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 106
+    Warning (13040): bidirectional pin "DRAM_DQ[5]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 106
+    Warning (13040): bidirectional pin "DRAM_DQ[6]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 106
+    Warning (13040): bidirectional pin "DRAM_DQ[7]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 106
+    Warning (13040): bidirectional pin "DRAM_DQ[8]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 106
+    Warning (13040): bidirectional pin "DRAM_DQ[9]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 106
+    Warning (13040): bidirectional pin "DRAM_DQ[10]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 106
+    Warning (13040): bidirectional pin "DRAM_DQ[11]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 106
+    Warning (13040): bidirectional pin "DRAM_DQ[12]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 106
+    Warning (13040): bidirectional pin "DRAM_DQ[13]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 106
+    Warning (13040): bidirectional pin "DRAM_DQ[14]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 106
+    Warning (13040): bidirectional pin "DRAM_DQ[15]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 106
+    Warning (13040): bidirectional pin "FPGA_I2C_SDAT" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 121
+    Warning (13040): bidirectional pin "GPIO_0[0]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[1]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[2]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[3]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[4]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[5]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[6]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[7]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[8]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[9]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[10]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[11]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[12]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[13]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[14]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[15]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[16]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[17]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[18]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[19]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[20]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[21]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[22]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[23]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[24]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[25]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[26]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[27]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[28]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[29]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[30]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[31]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[32]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[33]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[34]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[35]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_1[0]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[1]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[2]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[3]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[4]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[5]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[6]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[7]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[8]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[9]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[10]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[11]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[12]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[13]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[14]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[15]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[16]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[17]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[18]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[19]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[20]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[21]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[22]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[23]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[24]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[25]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[26]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[27]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[28]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[29]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[30]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[31]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[32]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[33]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[34]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[35]" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "PS2_CLK" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 215
+    Warning (13040): bidirectional pin "PS2_CLK2" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 216
+    Warning (13040): bidirectional pin "PS2_DAT" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 217
+    Warning (13040): bidirectional pin "PS2_DAT2" has no driver File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 218
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "ADC_CONVST" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 59
+    Warning (13410): Pin "ADC_DIN" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 60
+    Warning (13410): Pin "ADC_SCLK" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 62
+    Warning (13410): Pin "AUD_DACDAT" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 72
+    Warning (13410): Pin "AUD_XCK" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 74
+    Warning (13410): Pin "DRAM_ADDR[0]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 100
+    Warning (13410): Pin "DRAM_ADDR[1]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 100
+    Warning (13410): Pin "DRAM_ADDR[2]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 100
+    Warning (13410): Pin "DRAM_ADDR[3]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 100
+    Warning (13410): Pin "DRAM_ADDR[4]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 100
+    Warning (13410): Pin "DRAM_ADDR[5]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 100
+    Warning (13410): Pin "DRAM_ADDR[6]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 100
+    Warning (13410): Pin "DRAM_ADDR[7]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 100
+    Warning (13410): Pin "DRAM_ADDR[8]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 100
+    Warning (13410): Pin "DRAM_ADDR[9]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 100
+    Warning (13410): Pin "DRAM_ADDR[10]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 100
+    Warning (13410): Pin "DRAM_ADDR[11]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 100
+    Warning (13410): Pin "DRAM_ADDR[12]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 100
+    Warning (13410): Pin "DRAM_BA[0]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 101
+    Warning (13410): Pin "DRAM_BA[1]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 101
+    Warning (13410): Pin "DRAM_CAS_N" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 102
+    Warning (13410): Pin "DRAM_CKE" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 103
+    Warning (13410): Pin "DRAM_CLK" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 104
+    Warning (13410): Pin "DRAM_CS_N" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 105
+    Warning (13410): Pin "DRAM_LDQM" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 107
+    Warning (13410): Pin "DRAM_RAS_N" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 108
+    Warning (13410): Pin "DRAM_UDQM" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 109
+    Warning (13410): Pin "DRAM_WE_N" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 110
+    Warning (13410): Pin "FAN_CTRL" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 115
+    Warning (13410): Pin "FPGA_I2C_SCLK" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 120
+    Warning (13410): Pin "HEX3[0]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 136
+    Warning (13410): Pin "HEX3[1]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 136
+    Warning (13410): Pin "HEX3[2]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 136
+    Warning (13410): Pin "HEX3[3]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 136
+    Warning (13410): Pin "HEX3[4]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 136
+    Warning (13410): Pin "HEX3[5]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 136
+    Warning (13410): Pin "HEX3[6]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 136
+    Warning (13410): Pin "HEX4[0]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 137
+    Warning (13410): Pin "HEX4[1]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 137
+    Warning (13410): Pin "HEX4[2]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 137
+    Warning (13410): Pin "HEX4[3]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 137
+    Warning (13410): Pin "HEX4[4]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 137
+    Warning (13410): Pin "HEX4[5]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 137
+    Warning (13410): Pin "HEX4[6]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 137
+    Warning (13410): Pin "HEX5[0]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 138
+    Warning (13410): Pin "HEX5[1]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 138
+    Warning (13410): Pin "HEX5[2]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 138
+    Warning (13410): Pin "HEX5[3]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 138
+    Warning (13410): Pin "HEX5[4]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 138
+    Warning (13410): Pin "HEX5[5]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 138
+    Warning (13410): Pin "HEX5[6]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 138
+    Warning (13410): Pin "IRDA_TXD" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 200
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 210
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 210
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 210
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 210
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 210
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 210
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 210
+    Warning (13410): Pin "TD_RESET_N" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 231
+    Warning (13410): Pin "VGA_B[0]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 237
+    Warning (13410): Pin "VGA_B[1]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 237
+    Warning (13410): Pin "VGA_B[2]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 237
+    Warning (13410): Pin "VGA_B[3]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 237
+    Warning (13410): Pin "VGA_B[4]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 237
+    Warning (13410): Pin "VGA_B[5]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 237
+    Warning (13410): Pin "VGA_B[6]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 237
+    Warning (13410): Pin "VGA_B[7]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 237
+    Warning (13410): Pin "VGA_BLANK_N" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 238
+    Warning (13410): Pin "VGA_CLK" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 239
+    Warning (13410): Pin "VGA_G[0]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 240
+    Warning (13410): Pin "VGA_G[1]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 240
+    Warning (13410): Pin "VGA_G[2]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 240
+    Warning (13410): Pin "VGA_G[3]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 240
+    Warning (13410): Pin "VGA_G[4]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 240
+    Warning (13410): Pin "VGA_G[5]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 240
+    Warning (13410): Pin "VGA_G[6]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 240
+    Warning (13410): Pin "VGA_G[7]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 240
+    Warning (13410): Pin "VGA_HS" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 241
+    Warning (13410): Pin "VGA_R[0]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 242
+    Warning (13410): Pin "VGA_R[1]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 242
+    Warning (13410): Pin "VGA_R[2]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 242
+    Warning (13410): Pin "VGA_R[3]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 242
+    Warning (13410): Pin "VGA_R[4]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 242
+    Warning (13410): Pin "VGA_R[5]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 242
+    Warning (13410): Pin "VGA_R[6]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 242
+    Warning (13410): Pin "VGA_R[7]" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 242
+    Warning (13410): Pin "VGA_SYNC_N" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 243
+    Warning (13410): Pin "VGA_VS" is stuck at GND File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 246
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 28 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 26 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "ADC_DOUT" File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 61
+    Warning (15610): No output dependent on input pin "AUD_ADCDAT" File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 69
+    Warning (15610): No output dependent on input pin "CLOCK2_50" File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 80
+    Warning (15610): No output dependent on input pin "CLOCK3_50" File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 85
+    Warning (15610): No output dependent on input pin "CLOCK4_50" File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 90
+    Warning (15610): No output dependent on input pin "IRDA_RXD" File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 199
+    Warning (15610): No output dependent on input pin "KEY[2]" File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 205
+    Warning (15610): No output dependent on input pin "KEY[3]" File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 205
+    Warning (15610): No output dependent on input pin "SW[3]" File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 223
+    Warning (15610): No output dependent on input pin "SW[4]" File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 223
+    Warning (15610): No output dependent on input pin "SW[5]" File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 223
+    Warning (15610): No output dependent on input pin "SW[6]" File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 223
+    Warning (15610): No output dependent on input pin "SW[7]" File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 223
+    Warning (15610): No output dependent on input pin "SW[8]" File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 223
+    Warning (15610): No output dependent on input pin "SW[9]" File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 223
+    Warning (15610): No output dependent on input pin "TD_CLK27" File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 228
+    Warning (15610): No output dependent on input pin "TD_DATA[0]" File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 229
+    Warning (15610): No output dependent on input pin "TD_DATA[1]" File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 229
+    Warning (15610): No output dependent on input pin "TD_DATA[2]" File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 229
+    Warning (15610): No output dependent on input pin "TD_DATA[3]" File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 229
+    Warning (15610): No output dependent on input pin "TD_DATA[4]" File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 229
+    Warning (15610): No output dependent on input pin "TD_DATA[5]" File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 229
+    Warning (15610): No output dependent on input pin "TD_DATA[6]" File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 229
+    Warning (15610): No output dependent on input pin "TD_DATA[7]" File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 229
+    Warning (15610): No output dependent on input pin "TD_HS" File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 230
+    Warning (15610): No output dependent on input pin "TD_VS" File: G:/Documents/3rd year/hardware/vhdl_projects/Switch_Incremented_Counter/DE1_SOC_golden_top.v Line: 232
+Info (21057): Implemented 414 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 32 input pins
+    Info (21059): Implemented 113 output pins
+    Info (21060): Implemented 96 bidirectional pins
+    Info (21061): Implemented 173 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 251 warnings
+    Info: Peak virtual memory: 4882 megabytes
+    Info: Processing ended: Mon Oct 27 14:37:00 2025
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:11
 
 
