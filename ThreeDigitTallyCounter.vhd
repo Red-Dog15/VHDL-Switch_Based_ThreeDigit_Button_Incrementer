@@ -81,7 +81,7 @@ begin
 									 sw_reg2 <= '1';
                         end if;
 								
-								if counter_multiplier > 1 then
+								if counter_multiplier > 0 then
 									
 									counter <= counter + to_unsigned(counter_multiplier, counter'length);  -- increment counter
 									counter_multiplier <= 0;
@@ -116,7 +116,6 @@ begin
                     else
                         counter <= (others => '0');
                         timer <= 0;
-                        state <= s0;
                     end if;
             end case;
         end if;
