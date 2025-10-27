@@ -1,0 +1,8 @@
+db/
+incremental_db/
+output_files/
+*.rdr
+*.qws
+*.bak
+*.log
+*.flock
